@@ -18,7 +18,56 @@
             background-size: 500px;
 
         }
+.box {
+	display: flex;
+    height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
+.box .inner {
+	width: 400px;
+	height: 200px;
+	line-height: 200px;
+	font-size: 4em;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.box .inner:first-child {
+	background-color: lawngreen;
+	color: black;
+	transform-origin: right;
+	transform: perspective(100px) rotateY(-15deg);
+}
+
+.box .inner:last-child {
+	background-color: greenyellow;
+	color: darkgray;
+	transform-origin: left;
+	transform: perspective(100px) rotateY(15deg);
+}
+
+.box .inner span {
+	position: absolute;
+	animation: marquee 5s linear infinite;
+}
+
+.box .inner:first-child span {
+	animation-delay: 2.5s;
+	left: -100%;
+}
+
+@keyframes marquee {
+	from {
+		left: 100%;
+	}
+
+	to {
+		left: -100%;
+	}
+}
         * {
             box-sizing: border-box;
         }
@@ -103,8 +152,9 @@
 </head>
 
 <body>
-    <h1>HELLO WORLD </br>
-        CHAT WITH ME
+    <h1>😈🤖👽👾 HI 🧠👄🐍🐊</br>
+        I'm a non-binary computer ⚧ <br>
+        chat with me
     </h1>
     <br>
     <h1 id="texthere"></h1>
@@ -121,6 +171,16 @@
             </button>
         </form>
     </div>
+    <div class="box">
+        <div class="inner">
+            <span>data</span>
+        </div>
+        <div class="inner">
+            <span>death</span>
+        </div>
+    </div>
+
+
     <script>
         document.querySelector(".openChatBtn").addEventListener("click", openForm);
         document.querySelector(".close").addEventListener("click", closeForm);
