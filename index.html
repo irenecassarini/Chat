@@ -8,7 +8,7 @@
     <style>
         body {
            font-family: 'Press Start 2P', cursive;
-            font-size: 40px;
+            font-size: 20px;
             background: black;
             color: #00ff00;
             background-image:url("tenor.gif");
@@ -22,11 +22,16 @@
         * {
             box-sizing: border-box;
         }
-h1{
-    max-width: 700px;
-     text-align: center;
-     margin: 0 auto;
-     text-shadow: lawngreen 10px 10px 10px;
+
+        #qrcode{
+            margin-top: 20px;
+        }
+
+        h1{
+        max-width: 700px;
+        text-align: center;
+        margin: 0 auto;
+        text-shadow: whitesmoke 5px 5px 10px;
 }
         .openChatBtn {
             background-color: rgb(123, 28, 179);
@@ -101,8 +106,9 @@ h1{
 </head>
 
 <body>
-    <h1>HELLO WORLD</br>
-        CHAT WITH ME 
+    <h1>HELLO WORLD </br>
+        CHAT WITH ME
+        <img src="qrcode.png" alt="qrcode" id="qrcode">
     </h1>
     <br>
     <h1 id="texthere"></h1>
@@ -112,7 +118,7 @@ h1{
             <h1>Chat</h1>
             <label for="msg"><b>Message</b></label>
             <textarea placeholder="Type.." name="msg" id="searchinput" required></textarea>
-            /* leave a message */
+            we're all shadows here.
             <button type="submit" id="sendtext" class="btn">Send</button>
             <button type="button" class="btn close" onclick="closeForm()">
                 Close
